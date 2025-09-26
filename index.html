@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quà Sinh </title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Happy Birthday 🎂</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        </div>
+  <!-- Canvas Fireworks -->
+  <canvas id="fireworksCanvas"></canvas>
 
-    <div id="message-container" class="hidden">
-        <h1 id="main-message">Happy Birthday!</h1>
+  <!-- Text Container -->
+  <div id="textContainer"></div>
+
+  <!-- Cake Container -->
+  <div id="cakeContainer">
+    <img src="cake.png" alt="Birthday Cake">
+  </div>
+
+  <!-- Happy Birthday Text -->
+  <h1 id="hbText">🎉 Happy Birthday to You 🎉</h1>
+
+  <!-- Gift Button -->
+  <button id="giftButton">Nhận Quà 🎁</button>
+
+  <!-- Gift Modal -->
+  <div id="giftModal">
+    <div class="modal-content">
+      <span id="closeModal">&times;</span>
+      <img src="gift.jpg" alt="Gift">
+      <p>Chúc bạn sinh nhật thật vui vẻ 🎂🎉</p>
     </div>
+  </div>
 
-    <button id="gift-button" class="hidden">Nhận Quà</button>
-
-    <div id="gift-modal" class="hidden">
-        <img id="gift-image" src="https://via.placeholder.com/400" alt="Hình ảnh quà tặng">
-    </div>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
