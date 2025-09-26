@@ -1,0 +1,77 @@
+body {
+    background-color: #000;
+    overflow: hidden;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.character {
+    position: absolute;
+    font-size: 1.5rem;
+    color: #ff69b4; /* Màu hồng */
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: all 1.5s ease-out;
+}
+
+/* Hiệu ứng xoáy "hố đen" */
+.character.vortex {
+    animation: vortex 5s infinite linear;
+}
+
+@keyframes vortex {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Các hiệu ứng khác bạn sẽ thêm bằng JavaScript */
+
+.hidden {
+    display: none;
+}
+
+#gift-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+#gift-button:hover {
+    transform: scale(1.1);
+}
+
+#gift-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    text-align: center;
+}
+
+#gift-modal img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border: 5px solid #fff;
+    border-radius: 10px;
+}
